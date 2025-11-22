@@ -159,4 +159,7 @@ if Win == True:
         l.End1()
     if input()=="" or input():
         l.End2()
-p.End()
+        p.End()
+while True:
+    if input("Чтобы закрыть окно введите <выход>") == "выход":
+        break
