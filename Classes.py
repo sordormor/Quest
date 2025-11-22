@@ -15,12 +15,12 @@ def Enemy(Difficulty, var):
         Heal = 2
     elif Difficulty == "Normal" and var == 2:
         Weapon = "Дробовиком"
-        Damage = 3
+        Damage = 4
         Heal = 1
     elif Difficulty == "Hard":
         Weapon = "Огнемётом"
         Damage = 3
-        Heal = 1
+        Heal = 0
     return [Weapon , Damage, Heal]
 
 def Enemies(Difficulty):

@@ -66,6 +66,7 @@ while Win == False and Death == False:
                 else:
                     mass -= int(rl.Enemies[1+i*3])
                 if mass <=0:
+                    p.Dscreen()
                     print(f"В ожесточённой битве с врагом, вооружённым {rl.Enemies[0]}, вы потеряли свою жизнь...")
                     print(f"Вы смогли открыть {actives}, {passives}")
                     print("Удачи в следующий раз!")
@@ -96,6 +97,7 @@ while Win == False and Death == False:
                 else:
                     mass -= int(rr.Enemies[1+i*3])
                 if mass <=0:
+                    p.Dscreen()
                     print(f"В ожесточённой битве с врагом, вооружённым {rr.Enemies[0]}, вы потеряли свою жизнь...")
                     print(f"Вы смогли открыть {actives}, {passives}")
                     print("Удачи в следующий раз!")
@@ -125,6 +127,7 @@ while Win == False and Death == False:
                 else:
                     mass -= int(rf.Enemies[1+i*3])
                 if mass <=0:
+                    p.Dscreen()
                     print(f"В ожесточённой битве с врагом, вооружённым {rf.Enemies[0]}, вы потеряли свою жизнь...")
                     print(f"Вы смогли открыть {actives}, {passives}")
                     print("Удачи в следующий раз!")
@@ -148,7 +151,12 @@ while Win == False and Death == False:
             print(f"Ты чувствуешь что слева находятся {len(rl.Enemies)//3}, справа {len(rr.Enemies)//3}, впереди {len(rf.Enemies)//3} сущностей.")
         else:
             print("Что-то не то...")
+    p.fight(rand.randint(1,15))
 if Win == True:
     print("Или же...")
-
-        
+    p.skip(3)
+    if input()=="" or input():
+        l.End1()
+    if input()=="" or input():
+        l.End2()
+p.End()
