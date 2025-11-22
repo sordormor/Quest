@@ -2,25 +2,25 @@ import random as rand
 
 def Enemy(Difficulty, var):
     if Difficulty == "Easy" and var == 1:
-        Weapon = "Pistol"
+        Weapon = "Пистолетом"
         Damage = 1
         Heal = 2
     elif Difficulty == "Easy" and var == 2:
-        Weapon = "Fists"
+        Weapon = "Кулаками"
         Damage = 0
         Heal = 2
     elif Difficulty == "Normal" and var == 1:
-        Weapon = "Rifle"
+        Weapon = "Винтовкой"
         Damage = 3
         Heal = 2
     elif Difficulty == "Normal" and var == 2:
-        Weapon = "Shotgun"
-        Damage = 4
-        Heal = 2
-    elif Difficulty == "Hard":
-        Weapon = "Flamethrower"
+        Weapon = "Дробовиком"
         Damage = 3
-        Heal = 2
+        Heal = 1
+    elif Difficulty == "Hard":
+        Weapon = "Огнемётом"
+        Damage = 3
+        Heal = 1
     return [Weapon , Damage, Heal]
 
 def Enemies(Difficulty):
@@ -30,42 +30,54 @@ def Enemies(Difficulty):
             Enemies+=Enemy(Difficulty,rand.randint(1,2))
                            
     if Difficulty == "Normal":
-        for i in range(rand.randint(1,2)):
+        for i in range(rand.randint(1,4)):
             Enemies+=Enemy(Difficulty,rand.randint(1,2))
                            
     if Difficulty == "Hard":
-        for i in range(rand.randint(1,2)):
+        for i in range(rand.randint(1,3)):
             Enemies+=Enemy(Difficulty,rand.randint(1,2))
     return Enemies
-            
+#class Room():
+#    def __init__(self):
+#        self.Enemies = Enemies(self.Difficulty)
+#        self.NumbEnemies = len(self.Enemies)//3
 class EasyRoom():
-    Difficulty = "Easy"
-    Enemies = Enemies("Easy")
-    NumbEnemies = len(Enemies)//3
+    Difficulty = "Easy"    
+#    Enemies = Enemies("Easy")
+#    NumbEnemies = len(Enemies)//3
     Abillity = 0
     Win = False
 class NormalRoom():
     Difficulty = "Normal"
-    Enemies = Enemies(Difficulty)
-    NumbEnemies = len(Enemies)//3
+#    Enemies = Enemies(Difficulty)
+#    NumbEnemies = len(Enemies)//3
     Abillity = 0
     Win = False
 class HardRoom():
     Difficulty = "Hard"
-    Enemies = Enemies(Difficulty)
-    NumbEnemies = len(Enemies)//3
+#    Enemies = Enemies(Difficulty)
+#    NumbEnemies = len(Enemies)//3
     Abillity = 0
     Win = False
 class AbillityRoom():
     Difficulty = "Easy"
-    Enemies = []
+#    Enemies = Enemies(Difficulty)
     Abillity = rand.randint(1,2)
-    NumbEnemies = len(Enemies)//3
+#    NumbEnemies = len(Enemies)//3
     Win = False
 class FinalRoom():
-    Difficulty = "Easy"
-    Enemies = [Enemy("Easy",2)]
-    NumbEnemies = len(Enemies)//3
+    Difficulty = "Hard"
+#    Enemies = [Enemy("Hard",2)]
+#    NumbEnemies = len(Enemies)//3
     Abillity = 0
     Win = True
 
+#a = NormalRoom
+#a.__init__(a)
+#b = NormalRoom
+#b.__init__(b)
+#c = NormalRoom
+#c.__init__(c)
+#print(a.Enemies)
+#print(b.Enemies)
+#print(c.Enemies)

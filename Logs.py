@@ -33,7 +33,7 @@ def main(mass):
     print(f"Твоя масса:{mass}.")
 def res(Enemies, NumbEnemies):
     for i in range(NumbEnemies):
-        print("Вы одолели врага с,",end="")
+        print("Вы одолели врага с ",end="")
         print(Enemies[0+i*3])
     print("Вы выжили.")
     print("Покачто...")
